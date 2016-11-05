@@ -1,0 +1,344 @@
+html, body, div, span, iframe, h1, img, ul, ol, li, p{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    
+}
+body{
+    background-color: #F1F1EF;
+    /*height: 100%;*/
+}
+
+li, ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/*------------------------ Menu----------------------------*/
+
+.navigation{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    width: 100%;
+    height: 1.75em;
+}
+
+.nav-ul{
+    display: inline-flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    width: 350px;
+}
+
+.nav-ul > li{
+    display: inline-flex;
+    align-items: center;
+    color: #ccc;
+}
+
+.nav-ul > li > a{
+    font: 9pt sans-serif;
+    color: aliceblue;
+    color: #ccc;
+    margin: 0;
+}
+
+.nav-ul > li > a:hover{
+    color:#fff;
+}
+
+.nav-ul .currient a{
+    color: #fff;
+}
+
+.nav-ul > li > a > img{
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.nav-ul :last-child a{
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 350px){
+    
+    .navigation{
+        height: auto;
+    }
+    .nav-ul > .non_text_li{
+        display: none;
+    }
+    .nav-ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0.2em 0;
+    }
+    .nav-ul > li{
+        padding-bottom: 0.2em;
+        padding-top: 0.2em;
+        justify-content: center;
+    }
+    
+    .nav-ul :last-child{
+        padding-top: 0;
+    }
+}
+
+/*------------------------ End Menu----------------------------*/
+
+/*----------------------Website body---------------------------*/
+
+.whole_website{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 100px;
+}
+
+/*-------------------Website title------------------------*/
+
+.whole_website_title{
+    margin: 3em 0 2em 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.whole_website_title > img{
+    padding-bottom: 0.5em;
+}
+
+.whole_website_title > h2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: stretch;
+    margin: 0;
+    margin-left: 0.5em;
+    font: 25pt 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+.whole_website_title > h2 :first-child{
+    font: 10pt sans-serif;
+}
+@media screen and (max-width: 585px){
+    
+    .whole_website_title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .whole_website_title > img{
+        
+        max-width: 238px;
+        padding-bottom: 0.5em;
+    }
+    .whole_website_title > h2{
+        align-items: center;
+        margin: 0;
+    } 
+}
+/*-----------*/
+
+.videoheader{
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+} 
+
+.videoheader .vimeo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*-----------*/
+.filmdesc{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 3em;
+}
+.filmdesc :first-child{
+    width: 44.921875%;
+    height: auto;
+}
+.filmdesc :first-child p{
+    width: auto;
+    height: auto;
+    color: #333;
+    font: 12pt 'Times New Roman', Times, serif;
+    font-style: italic;
+    line-height: 1.5em;
+    margin-top: 1em;
+}
+.filmdesc :first-child p a{
+    font-style: normal;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #333;
+    margin-left: 5px;
+}
+.filmdesc :first-child p a:hover{
+    color: blue;
+}
+@media screen and (max-width: 585px){
+    
+    .filmdesc{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .filmdesc :first-child{
+    width: 100%;
+    }
+}
+
+/*------------------Website title End-------------------*/
+
+/*------------------Website Main Part-------------------*/
+
+.events{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #999;
+    margin: 0 4em;
+}
+.events > img{
+    margin-top: -.9em;
+}
+.events > ol > li{
+    margin-top: 1.5em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #999;
+}
+.events > ol > li > a{
+    display: flex;
+    flex-direction: row;
+    color: #333;
+}
+.events_item > a > :last-child{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    padding-left: 1em; 
+    width: 47.8%;
+}
+.first_header{
+    display: none;
+}
+.second_header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: stretch;
+    width: 100%;
+    margin: 0;
+    font: 25pt 'Times New Roman', Times, serif;
+    font-style: italic;
+    border-bottom: 1px solid #999;
+    margin: 1em 0;
+}
+.events_item > a > :last-child > p{
+    font: 12pt 'Times New Roman', Times, serif;
+    font-style: italic;
+    line-height: 1.5em;
+}
+.second_header > :first-child{
+    font: 10pt sans-serif;
+    margin-bottom: .1875em;
+}
+.events_item > a > img{
+    width: 14.5%;
+    height: 27.3%;
+}
+.first_img_div{
+    display: table;
+    width: 50%;
+    padding-left: 0;
+}
+.second_img_div{
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 0;
+}
+.second_img_div > img{
+    display: block;
+    max-width: 100%;
+    margin: 0;
+    padding-left: 0;
+}
+.events_item > a > :last-child:hover{
+    color: blue;
+}
+@media screen and (max-width: 1000px){
+    
+    .events_item > a{
+        display: flex;
+        flex-direction:column;
+    }
+    .events{
+        margin: 0 2em;
+    }
+    .second_header{
+        margin-top: 0;
+    }
+}
+@media screen and (max-width: 550px){
+    .events{
+        margin: 0 1em;
+    }
+    .events > ol > li > a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #333;
+    }
+    .first_img_div{
+        width: 100%;
+        margin-top: 4em;
+    }   
+    .events_item > a > :last-child{
+        width: 100%;
+    }
+    .events_item > a > :nth-child(2){
+        margin: 0;
+    }
+    .second_header{
+        display: none;     
+    }
+    .first_header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        margin: 0;
+        font: 25pt 'Times New Roman', Times, serif;
+        font-style: italic;
+        margin-bottom: 0.5em;
+    }
+    .first_header > :first-child{
+        font: 10pt sans-serif;
+        margin-bottom: .1875em;
+    }
+}
+/*---------------Website Main Part End----------------*/
+    
+@media screen and (max-width: 950px){
+    
+    .whole_website{
+        margin: 0 0;
+    }
+}
+/*----------------------Website body end-----------------------*/
