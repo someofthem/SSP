@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/pageStyle.css">
+    </head>
+    <body>
+        <script type="text/javascript">
+            angular.module('myApp', []);
+        </script>
+        <div class="titlePicture">
+            <img class="titlePicture" src="img/The_New_York_Times_logo.png"/>
+        </div>
+        <div class="articleList" ng-controller="requestController">
+            <div class="article" ng-repeat='rslt in result| limitTo: artclnmbr'>
+                <h2 class="headline">{{rslt.title}}</h2>
+                <p class="abstract">{{rslt.abstract}}</p>
+                <img class="picture" ng-src={{rslt.multimedia[0].url}}>
+                <p class="moreInf" ><a href={{rslt.url}}>see more</a></p>
+                <p class="madeBy"> Writen {{rslt.byline}}</p>
+            </div>
+            
+        </div>
+        <div class="numberOfArticles">
+            <span>Articles number</span>
+            <input type="text" ng-model="artclnmbr"/>
+        </div>
+        <!--<div ng
+        <form>
+            <h3>Add post form</h3>
+            <div class="addTitle">
+                <span>Title</span>
+                <input type="text" ng-model=""
+            </div>
+        </form>-->
+        <script src="js/controllers/requestController.js"></script>
+    </body>
+</html>

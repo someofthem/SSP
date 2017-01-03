@@ -1,0 +1,90 @@
+body, a, h4{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body{
+    background-color: #ccc;
+}
+
+a{
+    text-decoration: none;
+    color: black
+}
+
+.titlePicture{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.titlePicture img{
+    margin: 0;
+    width: 600px;
+    height: 100px;
+}
+/*------------------------------Articles------------------------------*/
+
+.articleList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    
+}
+
+.article{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin: 10px;
+    padding: 10px;
+    border: 4px solid black;
+    background-color: bisque;
+}
+
+.headline{
+    font: bold 25px serif;
+    margin-top: 0;
+}
+
+.abstract{
+    font: 15px sans-serif;
+}
+
+.picture{
+    height: 100px;
+    width: 100px;
+    align-self: center;
+}
+
+.moreInf > a{
+    color: blue;
+    font: bold 15px sans-serif;
+}
+
+.madeBy{
+    margin-top: 0;
+}
+
+/*----------------------------Filter--------------------------------*/
+
+.numberOfArticles{
+    display: flex;
+    flex-direction: row;
+    border: 4px solid black;
+    margin: 0 500px;
+    justify-content: center;
+    padding: 10px;
+    background-color: bisque;
+    border-color: black;
+    border-radius: 10px;
+}
+
+.numberOfArticles :first-child{
+    margin-right: 10px;
+}
+
+/*----------------------------Add Form--------------------------------*/
