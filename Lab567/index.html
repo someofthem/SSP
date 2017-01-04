@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/pageStyle.css">
+    </head>
+    <body>
+        <script type="text/javascript">
+            angular.module('myApp', []);
+        </script>
+        <div class="titlePicture">
+            <img class="titlePicture" src="img/The_New_York_Times_logo.png"/>
+        </div>
+        <div class="articleList" ng-controller="requestController">
+            <div class="article" ng-repeat='rslt in articles| limitTo: artclnmbr'>
+                <h2 class="headline">{{rslt.title}}</h2>
+                <p class="abstract">{{rslt.abstract}}</p>
+                <img class="picture" ng-src={{rslt.multimedia[0].url}}>
+                <p class="moreInf" ><a href={{rslt.url}}>see more</a></p>
+                <p class="madeBy"> Writen {{rslt.byline}}</p>
+            </div>
+            
+        </div>
+        <div class="numberOfArticles">
+            <span>Articles number</span>
+            <input type="text" ng-model="artclnmbr"/>
+        </div>
+        <div class="addForm">
+            <form>
+                <h3>Add post form</h3>
+                <div class="formAddTitle">
+                    <span>Title</span>
+                    <input type="text" ng-model="title"/>
+                </div>
+                <div class="formAddAbstract">
+                    <span>Abstract</span>
+                    <input type="text" ng-model="abstract"/>
+                </div>
+                <div class="formAddLink">
+                    <span>Link</span>
+                    <input type="text" ng-model="url"/>
+                </div>
+                <div class="formAddAuthor">
+                    <span>Written by</span>
+                    <input type="text" ng-model="byline"/>
+                </div>
+                <button class="addArticleButton" ng-click="addArticle(title,abstract,url,byline)">Add news</button>   
+            </form>
+        </div>
+        <script src="js/controllers/requestController.js"></script>
+    </body>
+</html>
